@@ -63,11 +63,7 @@ pip install "rembg[cpu,cli]" # for library + CLI
    ```
 
 3. **Install the Dependencies:**
-   If a `requirements.txt` file is provided:
-   ```sh
-   pip install -r requirements.txt
-   ```
-   Otherwise, install the dependencies manually:
+    install the dependencies manually:
    ```sh
    pip install pillow rembg
    ```

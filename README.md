@@ -14,10 +14,36 @@ RemBG GUI is a Python-based graphical user interface (GUI) that simplifies the p
 
 ## Requirements
 
-- Python 3.x
-- [Tkinter](https://docs.python.org/3/library/tkinter.html) (typically comes bundled with Python)
-- [Pillow](https://python-pillow.org/) for image processing
-- [rembg](https://github.com/danielgatis/rembg) for background removal
+- **Python:** >=3.10, <3.14
+- **Tkinter:** Typically comes bundled with Python.
+- **Pillow:** For image processing.
+- **rembg:** For background removal.  
+  Additionally, rembg has its own installation requirements:
+
+### rembg Installation
+
+If you already have **onnxruntime** installed, simply run:
+```sh
+pip install rembg            # for library
+pip install "rembg[cli]"     # for library + CLI
+```
+
+Otherwise, install rembg with explicit CPU/GPU support.
+
+**CPU support:**
+```sh
+pip install rembg[cpu]       # for library
+pip install "rembg[cpu,cli]" # for library + CLI
+```
+
+**GPU support:**
+1. Check if your system supports **onnxruntime-gpu** by visiting [onnxruntime.ai](https://onnxruntime.ai) and reviewing the installation matrix.
+2. If supported, install with:
+   ```sh
+   pip install "rembg[gpu]"       # for library
+   pip install "rembg[gpu,cli]"   # for library + CLI
+   ```
+   *Note:* Nvidia GPUs may require additional components such as `onnxruntime-gpu`, CUDA, and cudnn-devel. If you cannot install CUDA or cudnn-devel, use the CPU version with onnxruntime instead.
 
 ## Installation
 
@@ -34,7 +60,7 @@ RemBG GUI is a Python-based graphical user interface (GUI) that simplifies the p
    ```
 
 3. **Install the Dependencies:**
-   If a `requirements.txt` is provided:
+   If a `requirements.txt` file is provided:
    ```sh
    pip install -r requirements.txt
    ```
@@ -59,6 +85,25 @@ RemBG GUI is a Python-based graphical user interface (GUI) that simplifies the p
    - **Process Folder:** Click "Process Folder" to start processing. The progress bar will indicate the progress, and you can preview images as they’re processed.
    - **Preview Controls:** Use your mouse wheel to zoom in/out and click & drag to pan the preview images.
 
+## Building an Executable
+
+To turn your Python script into an executable file (for example, on Windows), you can use [PyInstaller](https://pyinstaller.org/).
+
+1. **Install PyInstaller:**
+   ```sh
+   pip install pyinstaller
+   ```
+
+2. **Build the Executable:**
+   Run PyInstaller with the following command:
+   ```sh
+   pyinstaller --onefile --noconsole rembg_gui.py
+   ```
+   *(Replace `rembg_gui.py` with your actual script filename.)*
+
+3. **Locate the Executable:**
+   After the build completes, your executable will be located in the `dist/` folder.
+
 ## Configuration
 
 Your settings (input folder, output folder, and selected model) are saved in a JSON file located at:
@@ -71,6 +116,7 @@ This allows the application to remember your preferences between sessions.
 
 - **Large File Handling:** If you experience issues with large files (especially when using Git LFS), refer to the repository documentation or GitHub's guidelines on [Git LFS](https://git-lfs.github.com/).
 - **Dependency Issues:** Ensure that all required Python libraries are installed and up-to-date.
+- **Executable Issues:** If you encounter problems when building an executable, check the PyInstaller documentation or run the script directly to isolate the issue.
 
 ## Contributing
 

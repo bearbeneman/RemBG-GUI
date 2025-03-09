@@ -1,1 +1,83 @@
-# RemBG-GUI
+# RemBG GUI
+
+RemBG GUI is a Python-based graphical user interface (GUI) that simplifies the process of removing image backgrounds using the [rembg](https://github.com/danielgatis/rembg) library. Built with Tkinter and Pillow, it provides an intuitive way to process individual images or entire folders while allowing you to preview the results with zoom and pan functionality.
+
+## Features
+
+- **Graphical Interface:** A modern UI built using Tkinter and ttk.
+- **Multiple Model Selection:** Choose from various background removal models (e.g. `u2net`, `birefnet-general`, etc.) with the default set to `u2net`.
+- **Folder Processing:** Process a batch of images from a selected input folder and save the output in a designated output folder.
+- **Preview Functionality:** View both the original and processed images side-by-side with zoom and pan controls.
+- **Persistent Configuration:** Saves your input/output folder paths and model choice to a configuration file (`.rembg_gui_config.json`) in your home directory.
+- **Optional Cropping:** Option to automatically crop transparent borders from processed images.
+- **Device Detection:** Automatically detects whether to use a GPU (if available) or CPU for processing.
+
+## Requirements
+
+- Python 3.x
+- [Tkinter](https://docs.python.org/3/library/tkinter.html) (typically comes bundled with Python)
+- [Pillow](https://python-pillow.org/) for image processing
+- [rembg](https://github.com/danielgatis/rembg) for background removal
+
+## Installation
+
+1. **Clone the Repository:**
+   ```sh
+   git clone https://github.com/your-username/RemBG-GUI.git
+   cd RemBG-GUI
+   ```
+
+2. **Create and Activate a Virtual Environment (Optional):**
+   ```sh
+   python -m venv venv
+   source venv/bin/activate   # On Windows: venv\Scripts\activate
+   ```
+
+3. **Install the Dependencies:**
+   If a `requirements.txt` is provided:
+   ```sh
+   pip install -r requirements.txt
+   ```
+   Otherwise, install the dependencies manually:
+   ```sh
+   pip install pillow rembg
+   ```
+
+## Usage
+
+1. **Launch the Application:**
+   ```sh
+   python rembg_gui.py
+   ```
+   *(Replace `rembg_gui.py` with the actual filename if different.)*
+
+2. **Using the Interface:**
+   - **Select Input Folder:** Click the "Select Input Folder" button to choose the folder containing your images.
+   - **Select Output Folder:** Click the "Select Output Folder" button to specify where the processed images should be saved.
+   - **Model Selection:** Use the dropdown menu to select a background removal model.
+   - **Crop Transparent Borders:** Tick the "Crop Transparent Borders" checkbox if you wish to remove excess transparent space from the output.
+   - **Process Folder:** Click "Process Folder" to start processing. The progress bar will indicate the progress, and you can preview images as they’re processed.
+   - **Preview Controls:** Use your mouse wheel to zoom in/out and click & drag to pan the preview images.
+
+## Configuration
+
+Your settings (input folder, output folder, and selected model) are saved in a JSON file located at:
+```sh
+~/.rembg_gui_config.json
+```
+This allows the application to remember your preferences between sessions.
+
+## Troubleshooting
+
+- **Large File Handling:** If you experience issues with large files (especially when using Git LFS), refer to the repository documentation or GitHub's guidelines on [Git LFS](https://git-lfs.github.com/).
+- **Dependency Issues:** Ensure that all required Python libraries are installed and up-to-date.
+
+## Contributing
+
+Contributions are welcome! If you find a bug or have suggestions for improvements, please open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+Happy background removing! If you have any questions or need further support, please feel free to open an issue on the repository.

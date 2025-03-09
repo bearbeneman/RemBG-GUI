@@ -2,6 +2,9 @@
 
 RemBG GUI is a Python-based graphical user interface (GUI) that simplifies the process of removing image backgrounds using the [rembg](https://github.com/danielgatis/rembg) library. Built with Tkinter and Pillow, it provides an intuitive way to process individual images or entire folders while allowing you to preview the results with zoom and pan functionality.
 
+![App Preview](app_preview.png)
+
+
 ## Features
 
 - **Graphical Interface:** A modern UI built using Tkinter and ttk.

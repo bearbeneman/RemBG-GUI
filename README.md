@@ -85,6 +85,24 @@ pip install "rembg[cpu,cli]" # for library + CLI
    - **Process Folder:** Click "Process Folder" to start processing. The progress bar will indicate the progress, and you can preview images as they’re processed.
    - **Preview Controls:** Use your mouse wheel to zoom in/out and click & drag to pan the preview images.
 
+## Pre-built Executable
+
+For users who prefer a hassle-free experience, a pre-built executable version of RemBG GUI is available. This Windows executable requires no additional installations or dependencies—simply download and run.
+
+**Download the Executable:**
+
+You can download the latest version from [Google Drive]([https://drive.google.com/your-exe-file-link](https://drive.google.com/file/d/1t9hXASicu6Uf8QWGvYjD_5wRSfxyig6_/view?usp=drive_link).  
+*(Replace the URL above with your actual Google Drive link.)*
+
+**Usage:**
+
+- No installation is required.
+- Simply double-click the executable file to launch RemBG GUI.
+- Enjoy background removal without needing to set up a Python environment.
+
+*Note:* This executable is only available for Windows. For users on other operating systems, please compile from source using the instructions provided above.
+
+
 ## Building an Executable
 
 To turn your Python script into an executable file (for example, on Windows), you can use [PyInstaller](https://pyinstaller.org/).

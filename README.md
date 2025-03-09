@@ -91,8 +91,7 @@ For users who prefer a hassle-free experience, a pre-built executable version of
 
 **Download the Executable:**
 
-You can download the latest version from [Google Drive]([https://drive.google.com/your-exe-file-link](https://drive.google.com/file/d/1t9hXASicu6Uf8QWGvYjD_5wRSfxyig6_/view?usp=drive_link).  
-*(Replace the URL above with your actual Google Drive link.)*
+[Download RemBG GUI Executable](https://drive.google.com/file/d/1t9hXASicu6Uf8QWGvYjD_5wRSfxyig6_/view?usp=drive_link)
 
 **Usage:**
 
@@ -101,6 +100,7 @@ You can download the latest version from [Google Drive]([https://drive.google.co
 - Enjoy background removal without needing to set up a Python environment.
 
 *Note:* This executable is only available for Windows. For users on other operating systems, please compile from source using the instructions provided above.
+
 
 
 ## Building an Executable
